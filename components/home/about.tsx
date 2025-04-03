@@ -2,8 +2,6 @@
 
 import { useInView } from "react-intersection-observer"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { FileText } from "lucide-react"
 
 export default function About() {
   const { ref, inView } = useInView({
