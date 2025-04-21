@@ -13,22 +13,22 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "NBA Game Predictor",
+      title: "Life Expectancy Indicators",
       description:
-        "Created a Python script that predicted the likelihood of an NBA team winning a home game against another team. Queried an NBA API to get data of all teams and used a RandomForestClassifier machine learning model to make predictions based on rolling average stats.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Python", "Sci-kit learn", "Pandas", "NumPy", "Jupyter Notebook"],
-      period: "January 2024 – April 2024",
-      githubUrl: "#",
+        "Researched and analyzed global socioeconomic factors affecting life expectancy in countries. ",
+      image: "/images/LEI-preview.png?height=400&width=600",
+      tags: ["Python", "Pandas", "Altair", "D3.js", "Plotly", "HTML/CSS", "Jupyter Notebook"],
+      period: "March 2025 – April 2025",
+      githubUrl: "https://patrickyu117.github.io/DS4200-Final-Project/",
     },
     {
-      title: "Kanbas",
+      title: "Fake Stack Overflow",
       description:
-        "Developed a full-stack dynamic web application mimicking the 'Canvas' education tool. Supports role-based access control for user authentication with distinct permissions for students and administrators, ensuring secure and tailored user experiences.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "JavaScript", "MongoDB", "HTML", "CSS"],
-      period: "January 2024 – April 2024",
-      githubUrl: "#",
+        "Developed a full-stack dynamic web application mimicking the 'Stack Overflow' website forum with added 'Communities' feature allowing users to join communities and filter posts. Supports role-based access control for user authentication with distinct permissions for general users, moderators, and administrators ensuring secure and tailored user experiences.",
+      image: "/images/FSO-preview.png?height=400&width=600",
+      tags: ["React", "TypeScript", "MongoDB", "Mongoose", "Jest", "Express", "Node.js", "Git"],
+      period: "January 2025 – April 2025",
+      githubUrl: "https://cs4530-s25-402.onrender.com/",
     },
   ]
 
@@ -91,7 +91,7 @@ export default function Projects() {
                     <Button variant="outline" className="border-sage-600 text-sage-600 hover:bg-sage-50" asChild>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
-                        View on GitHub
+                        View Live Website
                       </a>
                     </Button>
                   </div>

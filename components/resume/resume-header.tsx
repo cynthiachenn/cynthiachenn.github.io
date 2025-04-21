@@ -11,6 +11,16 @@ export default function ResumeHeader() {
     setVisible(true)
   }, [])
 
+  const onButtonClick = () => {
+    const pdfUrl = "/Cynthia_Chen_Resume.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Cynthia_Chen_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
   return (
     <section id="resume-header" className="pt-32 pb-16 bg-gradient-to-br from-white to-sage-50">
       <div
@@ -23,7 +33,7 @@ export default function ResumeHeader() {
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             An overview of the skills I've acquired through academic and professional experience with computer science and fintech.
           </p>
-          <Button className="bg-sage-600 hover:bg-sage-700 text-white">
+          <Button className="bg-sage-600 hover:bg-sage-700 text-white" onClick={onButtonClick}>
             <FileText className="mr-2 h-4 w-4" />
             Download Resume
           </Button>

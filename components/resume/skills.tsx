@@ -18,7 +18,7 @@ export default function Skills() {
     {
       category: "Frameworks",
       icon: <Palette className="h-8 w-8 text-sage-600" />,
-      items: [".NET", "Next.js","Node.js","React", "Tailwind","Express","Swagger", "Bootstrap", "Vue.js",],
+      items: [".NET", "Next","Node","React", "Tailwind","Express","Swagger", "Bootstrap", "Vue",],
     },
     {
       category: "Developer Tools",
@@ -28,7 +28,7 @@ export default function Skills() {
     {
       category: "Libraries",
       icon: <Globe className="h-8 w-8 text-sage-600" />,
-      items: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "FakeItEasy", "JUnit", "Swing", "HighCharts"],
+      items: ["Pandas", "NumPy", "Scikit-learn", "Jest", "Matplotlib", "FakeItEasy", "JUnit", "Swing", "HighCharts"],
     },
     {
       category: "Business Skills",

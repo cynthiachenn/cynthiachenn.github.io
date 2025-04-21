@@ -1,7 +1,7 @@
 "use client"
 
 import { useInView } from "react-intersection-observer"
-import { Users, BookOpen } from "lucide-react"
+import Image from "next/image"
 
 export default function Extracurriculars() {
   const { ref, inView } = useInView({
@@ -16,9 +16,11 @@ export default function Extracurriculars() {
       period: "September 2022 – Present",
       location: "Northeastern University",
       description: [
-        "With the goal of increasing visibility and accessibility of CS and STEM to younger audiences, we create fun and engaging events to introduce beginner concepts.",
+        "Leading a team of 5-10 to teach STEM/CS skills in a digestible manner to younger students",
+        "Fostering an inclusive, accessible, and diverse learning environment for students of underprivileged backgrounds",
+        "Partnering with local schools and programs to deliver engaging and informational workshops for beginner CS concepts"
       ],
-      icon: <BookOpen className="h-8 w-8 text-sage-600" />,
+      icon: "/images/firstbyte.png?height=20&width=20",
     },
     {
       title: "Oasis",
@@ -29,7 +31,7 @@ export default function Extracurriculars() {
         "Guide and mentor underclassmen student teams with their passion projects mimicking Agile methodology",
         "Explain and help implement concepts such as object-oriented programming and efficient algorithms",
       ],
-      icon: <Users className="h-8 w-8 text-sage-600" />,
+      icon: "/images/oasis.png?height=20&width=20",
     },
   ]
 
@@ -43,15 +45,20 @@ export default function Extracurriculars() {
             {activities.map((activity, index) => (
               <div
                 key={activity.title}
-                className={`transition-all duration-1000 ${
-                  inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
+                className={`transition-all duration-1000 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="md:w-1/4">
                     <div className="bg-sage-100 p-4 rounded-lg inline-flex items-center justify-center">
-                      {activity.icon}
+                      <Image
+                        src={activity.icon || "/placeholder.svg"}
+                        alt={activity.title}
+                        width={40}
+                        height={40}
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
                     <h3 className="text-xl font-semibold text-sage-700 mt-4">{activity.title}</h3>
                     <p className="text-sage-600 font-medium">{activity.role}</p>
