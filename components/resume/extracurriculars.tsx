@@ -12,6 +12,7 @@ export default function Extracurriculars() {
   const activities = [
     {
       title: "FirstByte",
+      link: "https://www.teachfirstbyte.com/",
       role: "CS Curricula Co-Lead",
       period: "September 2022 – Present",
       location: "Northeastern University",
@@ -24,6 +25,7 @@ export default function Extracurriculars() {
     },
     {
       title: "Oasis",
+      link: "https://oasisneu.com/",
       role: "Mentor",
       period: "September 2023 – April 2024",
       location: "Northeastern University",
@@ -60,7 +62,7 @@ export default function Extracurriculars() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold text-sage-700 mt-4">{activity.title}</h3>
+                    <h3 className="text-xl font-semibold text-sage-700 mt-4"><a href={activity.link}>{activity.title}</a></h3>
                     <p className="text-sage-600 font-medium">{activity.role}</p>
                     <p className="text-gray-500">{activity.period}</p>
                     <p className="text-gray-500">{activity.location}</p>
